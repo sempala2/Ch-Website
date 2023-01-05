@@ -6,25 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=nknut Antiqua">
-    <title>Document</title>
+    <title>ch-web</title>
     <style>
         *{
+            color: white;
             margin: 0;
             padding: 0;
         }
+        body {
+            background: rgb(202, 156, 71);
+          }
         header{
             background-color: black;
             height: 100px;
-            width: 100%;
+            width: 100vw;
+            z-index: 9999;
             display: flex;
-            position: relative;
+            top: 0;
+            position: fixed;
         }
         nav{
             position: absolute;
             align-self: center;
             right: 10%;
         }
-        ul{
+        nav ul{
             display: flex;
             list-style-type: none;
             color: white;
@@ -51,42 +57,240 @@
             font-size:large;
             left: 10%;
         }
-        main{
-            position: relative;
-        }
-        #background-video {
-            height: 100vh;
-            width: 100vw;
-            object-fit: cover;
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-        @media (max-width: 750px) {
-    #background-video { display: none; }
-    body {
-      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
-      background-size: cover;
-    }
+/*---------------------------------------------------------------*/
+h2 {
+  color: black;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
 }
-        .c-name, .c-slogan {
-            color: white;
-            font-family: Trebuchet MS;
-            font-weight: bold;
-            text-align: center;
-        }
-        .c-name {
-            font-size: 6rem;
-            margin-top: 30vh; 
-            font-family: 'nknut Antiqua', serif;
-        }
 
-        .c-slogan { font-size: 3rem; }
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #555;
+  line-height: 22px;
+}
+.content {
+  margin-top: 10px;
+  background-color: rgb(202, 156, 71);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.cardContainer {
+  position: relative;
+  width: 20vw;
+  height: 200px;
+  min-width: 20vw;
+  min-height: 200px;
+  perspective: 1000px;
+}
+.card {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -moz-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 14px 50px -4px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4);
+}
+.card:hover {
+  transform: translateZ(0px);
+}
+.card:hover:after {
+  opacity: 1;
+}
+.card .side {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+}
+.card .front {
+  z-index: 2;
+}
+.card .info {
+  padding: 16px;
+}
+
+.front .img {
+  overflow: hidden;
+  background-color: #dadce2;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 70%;
+}
+.front .img img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ministries{
+  margin-left: 50px;
+}
+.min-content{
+  display: flex;
+  gap: 20px;
+}
+.min-card{
+  width: 400px;
+  color: black;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+.event .min-card{
+  width: 100%;
+  color: black;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+.min-card .info{
+  padding: 5px;
+  bottom: 0;
+  position: absolute;
+  background-color: #ffffffc1;
+}
+.min-card img{
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+.min-card h2{
+  z-index: 1;
+}
+.event-map{
+  margin-top: 20px;
+}
+.map,.event{
+  width: 50%;
+}
+.map{
+  margin: 5px;
+  width: 80%;
+  display: flex;
+  border: solid white 2px;
+  padding: 2px;
+  background-color: beige;
+  border-radius: 5px;
+  gap: 20px;
+  overflow: hidden;
+}
+footer{
+  margin-top: 5px;
+  padding: 20px;
+  width: 100%;
+  background-color: rgb(137, 130, 0);
+}
+.footer{
+  display: flex;
+  padding: 20px;
+}
+.footer .f{
+  width: 25%;
+}
+.f ul{
+  list-style-type: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: large;
+}
+.f li{
+  line-height: 20px;
+  height: 30px;
+}
     </style>
+
+<style>
+  * {box-sizing: border-box;}
+  body {font-family: Verdana, sans-serif;}
+  .mySlides {display: none;
+    height: 100%;
+    width: 100%;
+  }
+  .mySlides img{
+    width: 100%;
+    height: 100%;
+  }
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 97%;
+    height: 80vh;
+    position: relative;
+    margin: auto;
+    margin-top: 90px;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .d{
+    margin-top: -25px;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+  </style>
 </head>
 <body>
     <header>
@@ -102,15 +306,202 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="main-bg">
-            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-                <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
-              </video>
-              
-              <h1 class="c-name">CHURCH NAME</h1>
-              <h2 class="c-slogan">Church Slogan</h2>
+    <!-----------------------------------end of hearder-------------->    
+        <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <img src="ch.jpg" style="width:100%">
         </div>
-    </main>
+        
+        <div class="mySlides fade">
+          <img src="head.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="banner.jpg" style="width:100%">
+        </div>
+        </div>
+        <div class="d" style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+       
+      <!-------------end of banner-------------------------------------->
+
+      <h1 style="margin-left: 50px;">OUR STAFF</h1>
+    <div class="content">
+        <div class="cardContainer ">
+            <div class="card">
+              <div class="side front">
+                <div class="img"> <img src="head.jpg" alt=""></div>
+                <div class="info">
+                  <h2>member 1</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cardContainer ">
+            <div class="card">
+              <div class="side front">
+                <div class="img"><img src="head.jpg" alt=""> </div>
+                <div class="info">
+                  <h2>member 2</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cardContainer ">
+            <div class="card">
+              <div class="side front">
+                <div class="img"><img src="head.jpg" alt=""></div>
+                <div class="info">
+                  <h2>Member 2</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardContainer ">
+            <div class="card">
+              <div class="side front">
+                <div class="img"><img src="head.jpg" alt=""></div>
+                <div class="info">
+                  <h2>Member 2</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--------------------------------------end of stuff--------------------------------->
+        <div class="ministries">
+            <h1 class="min-txt">MINISTRIES</h1>
+            <div class="min-content">
+
+                <div class="min-card">
+                  <img src="ch.jpg" alt="">
+                  <div class="info">
+                    <h2>Ministry</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, aspernatur 
+                      atque rerum beatae porro quasi vero nam corporis laborum recusandae dolores! Blanditiis 
+                      labore tenetur delectus temporibus quae consequatur sequi vero.</p>
+                  </div>
+            </div>
+
+            <div class="min-card">
+              <img src="ch.jpg" alt="">
+              <div class="info">
+                <h2>Ministry</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, aspernatur 
+                  atque rerum beatae porro quasi vero nam corporis laborum recusandae dolores! Blanditiis 
+                  labore tenetur delectus temporibus quae consequatur sequi vero.</p>
+              </div>
+        </div>
+
+        <div class="min-card">
+          <img src="ch.jpg" alt="">
+          <div class="info">
+            <h2>Ministry</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, aspernatur 
+              atque rerum beatae porro quasi vero nam corporis laborum recusandae dolores! Blanditiis 
+              labore tenetur delectus temporibus quae consequatur sequi vero.</p>
+          </div>
+    </div>
+        </div>
+        <div class="event-map">
+          <div class="event">
+            <div class="min-card">
+              <img src="" alt="">
+              <div class="info">
+                <h2>Event 1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, aspernatur 
+                  atque rerum beatae porro quasi vero nam corporis laborum recusandae dolores! Blanditiis 
+                  labore tenetur delectus temporibus quae consequatur sequi vero.</p>
+              </div>
+            </div>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7582116341223!2d32.56840901325892!3d0.3145069997705451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbd34feaaa771%3A0xbe83d37f86081fb2!2sVictoria%20Mall%20Entebbe!5e0!3m2!1sen!2sug!4v1672953418417!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-info">
+              <h2>Address</h2>
+              <p>25 First Street, 2nd Floor <br>Entebbe, MA 02141 <br>Uganda</p>
+              <h2>Telephone</h2>
+              <p>0703977383 <br>0783583393</p>
+              <h2>Email</h2>
+              <p>mychurchemail@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <h1 style="padding: 5px;">The NAME</h1>
+          <div class="footer">
+            <div class="f about-us">
+              <h2>ABOUT US</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente 
+                libero corrupti expedita inventore totam beatae animi, nulla porro
+                 accusantium tempora quam maiores magnam quaerat 
+                ullam corporis facilis repellat alias voluptates!</p>
+            </div>
+            <div class="f ministries">
+              <h2>MINISTRIES</h2>
+              <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>News & Events</li>
+                <li>Testimonies</li>
+                <li>Give</li>
+                <li>Contact</li>
+            </ul>
+            </div>
+            <div class="f contact">
+              <h2>Contact</h2>
+              <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>News & Events</li>
+                <li>Testimonies</li>
+                <li>Give</li>
+                <li>Contact</li>
+            </ul>
+            </div>
+            <div class="f social">
+              <h2>Social Media</h2>
+              <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>News & Events</li>
+                <li>Testimonies</li>
+                <li>Give</li>
+                <li>Contact</li>
+            </ul>
+            </div>
+          </div>
+          <h3 style="width: 100%; text-align: center;">@ 2023 copyright websitename.com</h3>
+        </footer>
+        <script>
+          let slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+          }
+          </script>
+
 </body>
 </html>
