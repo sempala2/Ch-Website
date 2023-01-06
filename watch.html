@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+        background-color: #fafafa;
+    }
+
+header{
+          color: black;
+            background-color: #ffffff;
+            height: 70px;
+            width: 100vw;
+            z-index: 9999;
+            display: flex;
+            top: 0;
+            position: fixed;
+        }
+        nav{
+            position: absolute;
+            align-self: center;
+            right: 10%;
+        }
+        nav ul{
+            display: flex;
+            list-style-type: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: large;
+            gap: 20px;
+        }
+        ul a{
+            text-decoration: none;
+            color: black;
+        }
+        li{
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: ease .2s;
+            user-select: none;
+            cursor: pointer;
+        }
+        li:hover{
+           text-decoration-color: red;
+            
+        }
+        .logo{
+            position: absolute;
+            color: white;
+            align-self: center;
+            font-size:large;
+            left: 10%;
+        }
+        .container{
+            display: flex;
+            margin-top: 80px;
+            width: 100vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        footer{
+            margin: 0;
+            margin-top: 5px;
+            padding: 20px;
+            width: 100vw;
+            background-color: rgb(244, 243, 221);
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .f{
+  width: 22%;
+}
+.f ul{
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+.f li{
+  line-height: 20px;
+  height: 30px;
+}
+
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="logo-demo.png" alt="logo" height="120px"></div>
+        <nav>
+            <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href="about-us.html"><li>who we are</li></a>
+              <a href="Contact-us.html"><li>Events & News</li></a>
+              <a href="gallery.html"><li>Gallery</li></a>
+              <a href="watch.html"><li>Watch</li></a>
+              <a href="give.html"><li>Give</li></a>
+               <a href="Contact-us.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-OAa9k0zCDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        <h1 class="h1" style="padding: 5px;">The NAME</h1>
+        <div class="footer">
+          <div class="f about-us">
+            <h2>ABOUT US</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente 
+              libero corrupti expedita inventore totam beatae animi, nulla porro
+               accusantium tempora quam maiores magnam quaerat 
+              ullam corporis facilis repellat alias voluptates!</p>
+          </div>
+          <div class="f ministries">
+            <h2>MINISTRIES</h2>
+            <ul>
+              <a href=""><li>Youth ministry</li></a>
+              <a href=""><li>Children ministry</li></a>
+              <a href=""><li>Education</li></a>
+          </ul>
+          </div>
+          <div class="f contact">
+            <h2>Contact</h2>
+            <ul>
+              <a href="https://goo.gl/maps/DJhFz7Qitkd8yY3y5"><li>25 First Street, 2nd Floor <br>
+                Entebbe, MA 02141 <br>
+                Uganda</li></a>
+                <br>
+                <br>
+              <a href=""><li>+256703-977-985</li></a>
+              <a href="mailto:myemail@example.com"><li>myemail@example.com</li></a>
+          </ul>
+          </div>
+          <div class="f social">
+            <h2>Social Media</h2>
+            <ul>
+              <a href=""><li>Facebook</li></a>
+              <a href=""><li>Twiter</li></a>
+              <a href=""><li>Linkedin</li></a>
+              <a href=""><li>Youtube</li></a>
+          </ul>
+          </div>
+        </div>
+        <h3 style="width: 100%; font-size: medium; font-weight: lighter; text-align: center;">@ 2023 copyright websitename.com</h3>
+      </footer>
+</body>
+</html>
