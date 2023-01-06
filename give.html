@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Donate to Our Church</title>
+  <style>
+    header{
+          color: black;
+            background-color: #ffffff;
+            height: 70px;
+            width: 100vw;
+            z-index: 9999;
+            display: flex;
+            top: 0;
+            position: fixed;
+        }
+        nav{
+            position: absolute;
+            align-self: center;
+            right: 10%;
+        }
+        nav ul{
+            display: flex;
+            list-style-type: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: large;
+            gap: 20px;
+        }
+        ul a{
+            text-decoration: none;
+            color: black;
+        }
+        li{
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: ease .2s;
+            user-select: none;
+            cursor: pointer;
+        }
+        li:hover{
+           text-decoration-color: red;
+            
+        }
+        .logo{
+            position: absolute;
+            color: white;
+            align-self: center;
+            font-size:large;
+            left: 10%;
+        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .donation-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .donation-form input[type="text"],
+    .donation-form input[type="email"],
+    .donation-form input[type="number"] {
+      width: 60%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .donation-form button {
+      background-color: #0077c9;
+      border: none;
+      color: white;
+      font-size: 16px;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .donation-form button:hover {
+      background-color: #005f9c;
+    }
+    .success-message {
+      font-size: 20px;
+      color: green;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+    .purpose {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .purpose h2 {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .purpose p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo-demo.png" alt="logo" height="120px"></div>
+        <nav>
+            <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href="about-us.html"><li>About Us</li></a>
+              <a href="Contact-us.html"><li>Events & News</li></a>
+              <a href="gallery.html"><li>Gallery</li></a>
+              <a href="Contact-us.html"><li>Give</li></a>
+               <a href="Contact-us.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+  <div class="container">
+    <h1>Donate to Our Church</h1>
+    <p>Thank you for considering a donation to our church. Your generosity helps us continue to serve our community and spread the love of Christ.</p>
+    
+    <div class="purpose">
+      <h2>Purpose of Donation:</h2>
+      <p>Our church is raising funds to [specific purpose of donation]. Your contribution will help us [specific action the funds will enable].</p>
+    </div>
+    
+    <form class="donation-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="number" placeholder="Donation Amount" min="1" required>
+      <button>DONATE</button>
+      </form>
+      </div>
+      </body>
+      </html>

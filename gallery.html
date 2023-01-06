@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+        background-color: #fafafa;
+    }
+
+header{
+          color: black;
+            background-color: #ffffff;
+            height: 70px;
+            width: 100vw;
+            z-index: 9999;
+            display: flex;
+            top: 0;
+            position: fixed;
+        }
+        nav{
+            position: absolute;
+            align-self: center;
+            right: 10%;
+        }
+        nav ul{
+            display: flex;
+            list-style-type: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: large;
+            gap: 20px;
+        }
+        ul a{
+            text-decoration: none;
+            color: black;
+        }
+        li{
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: ease .2s;
+            user-select: none;
+            cursor: pointer;
+        }
+        li:hover{
+           text-decoration-color: red;
+            
+        }
+        .logo{
+            position: absolute;
+            color: white;
+            align-self: center;
+            font-size:large;
+            left: 10%;
+        }
+    /* add some style to the gallery */
+    .gallery {
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 10px;
+    }
+    .gallery img {
+      width: 31vw;
+      height: 200px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+    .gallery .caption {
+      text-align: center;
+      font-size: 0.8em;
+      color: #666;
+      margin: 10px;
+    }
+    .g-h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 80px;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="logo-demo.png" alt="logo" height="120px"></div>
+        <nav>
+            <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href="Contact-us.html"><li>About Us</li></a>
+              <a href="Contact-us.html"><li>Events & News</li></a>
+              <a href="gallery.html"><li>Gallery</li></a>
+              <a href="Contact-us.html"><li>Give</li></a>
+               <a href="Contact-us.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+
+  <h1 class="g-h1">My Gallery</h1>
+  <div class="gallery">
+    <div>
+      <img src="https://picsum.photos/id/10/300/200" alt="Random image 1">
+      <div class="caption">Image 1</div>
+    </div>
+    <div>
+      <img src="https://picsum.photos/id/20/300/200" alt="Random image 2">
+      <div class="caption">Image 2</div>
+    </div>
+    <div>
+      <img src="https://picsum.photos/id/30/300/200" alt="Random image 3">
+      <div class="caption">Image 3</div>
+    </div>
+    <div>
+        <img src="https://picsum.photos/id/10/300/200" alt="Random image 1">
+        <div class="caption">Image 1</div>
+      </div>
+      <div>
+        <img src="https://picsum.photos/id/20/300/200" alt="Random image 2">
+        <div class="caption">Image 2</div>
+      </div>
+      <div>
+        <img src="https://picsum.photos/id/30/300/200" alt="Random image 3">
+        <div class="caption">Image 3</div>
+      </div>
+      <div>
+      <img src="https://picsum.photos/id/10/300/200" alt="Random image 1">
+      <div class="caption">Image 1</div>
+    </div>
+    <div>
+      <img src="https://picsum.photos/id/20/300/200" alt="Random image 2">
+      <div class="caption">Image 2</div>
+    </div>
+    <div>
+      <img src="https://picsum.photos/id/30/300/200" alt="Random image 3">
+      <div class="caption">Image 3</div>
+    </div>
+    <!-- add more images here -->
+  </div>
+</body>
+</html>

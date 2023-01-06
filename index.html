@@ -9,16 +9,18 @@
     <title>ch-web</title>
     <style>
         *{
-            color: white;
+          font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            color: black;
         }
         body {
-            background: rgb(202, 156, 71);
+            background-color: #fafafa;
           }
         header{
-            background-color: black;
-            height: 100px;
+          color: black;
+            background-color: #ffffff;
+            height: 70px;
             width: 100vw;
             z-index: 9999;
             display: flex;
@@ -33,11 +35,14 @@
         nav ul{
             display: flex;
             list-style-type: none;
-            color: white;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bolder;
             font-size: large;
             gap: 20px;
+        }
+        ul a{
+            text-decoration: none;
+            color: black;
         }
         li{
             text-decoration: underline;
@@ -58,6 +63,13 @@
             left: 10%;
         }
 /*---------------------------------------------------------------*/
+.h1{
+    font-size: 2em;
+    font-weight: normal;
+    width: 100vw;
+    margin-bottom: 5px;
+    border-bottom: black solid 1px;
+}
 h2 {
   color: black;
   font-size: 27px;
@@ -74,7 +86,7 @@ p {
 }
 .content {
   margin-top: 10px;
-  background-color: rgb(202, 156, 71);
+  background-color: rgb(249, 247, 241);
   width: 100vw;
   display: flex;
   align-items: center;
@@ -120,6 +132,7 @@ p {
   backface-visibility: hidden;
   position: absolute;
   width: 100%;
+  border: rgba(139, 139, 139, 0.505) solid 2px;
   height: 100%;
   border-radius: 10px;
   background-color: white;
@@ -138,7 +151,7 @@ p {
   background-size: cover;
   border-radius: 5px 5px 0 0;
   width: 100%;
-  height: 70%;
+  height: 75%;
 }
 .front .img img{
   display: block;
@@ -155,7 +168,7 @@ p {
 .min-card{
   width: 400px;
   color: black;
-  border-radius: 20px;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
   height: 250px;
@@ -163,7 +176,7 @@ p {
 .event .min-card{
   width: 100%;
   color: black;
-  border-radius: 20px;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
   height: 250px;
@@ -195,7 +208,7 @@ p {
   display: flex;
   border: solid white 2px;
   padding: 2px;
-  background-color: beige;
+  background-color: rgb(247, 247, 231);
   border-radius: 5px;
   gap: 20px;
   overflow: hidden;
@@ -204,7 +217,7 @@ footer{
   margin-top: 5px;
   padding: 20px;
   width: 100%;
-  background-color: rgb(137, 130, 0);
+  background-color: rgb(244, 243, 221);
 }
 .footer{
   display: flex;
@@ -215,10 +228,8 @@ footer{
 }
 .f ul{
   list-style-type: none;
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  font-size: large;
+  font-size: medium;
 }
 .f li{
   line-height: 20px;
@@ -245,7 +256,8 @@ footer{
     height: 80vh;
     position: relative;
     margin: auto;
-    margin-top: 90px;
+    margin-top: 60px;
+    margin-bottom: 10px;
   }
   
   /* Number text (1/3 etc) */
@@ -290,6 +302,21 @@ footer{
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
   }
+  .ban-info{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    right: 40%;
+    bottom: 5%;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.5); /* translucent black */
+  }
+  .ban-info p{
+    color: black;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
   </style>
 </head>
 <body>
@@ -297,28 +324,51 @@ footer{
         <div class="logo"><img src="logo-demo.png" alt="logo" height="120px"></div>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>News & Events</li>
-                <li>Testimonies</li>
-                <li>Give</li>
-                <li>Contact</li>
+              <a href="index.html"><li>Home</li></a>
+              <a href="about-us.html"><li>About Us</li></a>
+              <a href="Contact-us.html"><li>Events & News</li></a>
+              <a href="gallery.html"><li>Gallery</li></a>
+              <a href="Contact-us.html"><li>Give</li></a>
+               <a href="Contact-us.html"><li>Contact</li></a>
             </ul>
         </nav>
     </header>
     <!-----------------------------------end of hearder-------------->    
         <div class="slideshow-container">
-        
         <div class="mySlides fade">
-          <img src="ch.jpg" style="width:100%">
+          <img src="ch-bg1.jpg" style="width:100%">
+          <div class="ban-info">
+            <h1>Event Title</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+              Aspernatur nulla minus praesentium dignissimos deleniti,
+               explicabo magnam numquam voluptatem, asperiores corrupti odio provident sequi. 
+               Repudiandae,sequi error? Voluptas maiores adipisci iure.</p>
+          </div>
         </div>
         
         <div class="mySlides fade">
-          <img src="head.jpg" style="width:100%">
+          <img src="ban2.png" style="width:100%">
+          <div class="ban-info">
+            <h1>Event Title</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+              Aspernatur nulla minus praesentium dignissimos deleniti,
+               explicabo magnam numquam voluptatem, asperiores corrupti odio provident sequi. 
+               Repudiandae,sequi error? Voluptas maiores adipisci iure.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, 
+              odio mollitia. Consequatur voluptatibus error neque non iure earum aspernatur 
+              culpa vitae. Fugit voluptatibus deserunt officia totam earum id nisi. Quidem.</p>
+          </div>
         </div>
         
         <div class="mySlides fade">
           <img src="banner.jpg" style="width:100%">
+          <div class="ban-info">
+            <h1>Event Title</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+              Aspernatur nulla minus praesentium dignissimos deleniti,
+               explicabo magnam numquam voluptatem, asperiores corrupti odio provident sequi. 
+               Repudiandae,sequi error? Voluptas maiores adipisci iure.</p>
+          </div>
         </div>
         </div>
         <div class="d" style="text-align:center">
@@ -329,12 +379,12 @@ footer{
        
       <!-------------end of banner-------------------------------------->
 
-      <h1 style="margin-left: 50px;">OUR STAFF</h1>
+      <h1 class="h1" style="margin-left: 50px;">OUR STAFF</h1>
     <div class="content">
         <div class="cardContainer ">
             <div class="card">
               <div class="side front">
-                <div class="img"> <img src="head.jpg" alt=""></div>
+                <div class="img"> <img src="face1.jpg" alt=""></div>
                 <div class="info">
                   <h2>member 1</h2>
                 </div>
@@ -345,7 +395,7 @@ footer{
           <div class="cardContainer ">
             <div class="card">
               <div class="side front">
-                <div class="img"><img src="head.jpg" alt=""> </div>
+                <div class="img"><img src="face1.jpg" alt=""> </div>
                 <div class="info">
                   <h2>member 2</h2>
                 </div>
@@ -356,7 +406,7 @@ footer{
           <div class="cardContainer ">
             <div class="card">
               <div class="side front">
-                <div class="img"><img src="head.jpg" alt=""></div>
+                <div class="img"><img src="face1.jpg" alt=""></div>
                 <div class="info">
                   <h2>Member 2</h2>
                 </div>
@@ -367,7 +417,7 @@ footer{
           <div class="cardContainer ">
             <div class="card">
               <div class="side front">
-                <div class="img"><img src="head.jpg" alt=""></div>
+                <div class="img"><img src="face1.jpg" alt=""></div>
                 <div class="info">
                   <h2>Member 2</h2>
                 </div>
@@ -377,13 +427,13 @@ footer{
         </div>
         <!--------------------------------------end of stuff--------------------------------->
         <div class="ministries">
-            <h1 class="min-txt">MINISTRIES</h1>
+            <h1 class="h1 min-txt">MINISTRIES</h1>
             <div class="min-content">
 
                 <div class="min-card">
-                  <img src="ch.jpg" alt="">
+                  <img src="youth.jpg" alt="">
                   <div class="info">
-                    <h2>Ministry</h2>
+                    <h2>Youth Ministry</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, aspernatur 
                       atque rerum beatae porro quasi vero nam corporis laborum recusandae dolores! Blanditiis 
                       labore tenetur delectus temporibus quae consequatur sequi vero.</p>
@@ -391,9 +441,9 @@ footer{
             </div>
 
             <div class="min-card">
-              <img src="ch.jpg" alt="">
+              <img src="ed.jpg" alt="">
               <div class="info">
-                <h2>Ministry</h2>
+                <h2>Education Ministry</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, aspernatur 
                   atque rerum beatae porro quasi vero nam corporis laborum recusandae dolores! Blanditiis 
                   labore tenetur delectus temporibus quae consequatur sequi vero.</p>
@@ -401,9 +451,9 @@ footer{
         </div>
 
         <div class="min-card">
-          <img src="ch.jpg" alt="">
+          <img src="child.jpg" alt="">
           <div class="info">
-            <h2>Ministry</h2>
+            <h2>Children Ministry</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, aspernatur 
               atque rerum beatae porro quasi vero nam corporis laborum recusandae dolores! Blanditiis 
               labore tenetur delectus temporibus quae consequatur sequi vero.</p>
@@ -412,10 +462,11 @@ footer{
         </div>
         <div class="event-map">
           <div class="event">
+            <h1 class="h1">Events</h1>
             <div class="min-card">
-              <img src="" alt="">
+              <img src="bapt.jpg" alt="">
               <div class="info">
-                <h2>Event 1</h2>
+                <h2>baptsism</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, aspernatur 
                   atque rerum beatae porro quasi vero nam corporis laborum recusandae dolores! Blanditiis 
                   labore tenetur delectus temporibus quae consequatur sequi vero.</p>
@@ -436,7 +487,7 @@ footer{
         </div>
 
         <footer>
-          <h1 style="padding: 5px;">The NAME</h1>
+          <h1 class="h1" style="padding: 5px;">The NAME</h1>
           <div class="footer">
             <div class="f about-us">
               <h2>ABOUT US</h2>
@@ -448,38 +499,34 @@ footer{
             <div class="f ministries">
               <h2>MINISTRIES</h2>
               <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>News & Events</li>
-                <li>Testimonies</li>
-                <li>Give</li>
-                <li>Contact</li>
+                <a href=""><li>Youth ministry</li></a>
+                <a href=""><li>Children ministry</li></a>
+                <a href=""><li>Education</li></a>
             </ul>
             </div>
             <div class="f contact">
               <h2>Contact</h2>
               <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>News & Events</li>
-                <li>Testimonies</li>
-                <li>Give</li>
-                <li>Contact</li>
+                <a href="https://goo.gl/maps/DJhFz7Qitkd8yY3y5"><li>25 First Street, 2nd Floor <br>
+                  Entebbe, MA 02141 <br>
+                  Uganda</li></a>
+                  <br>
+                  <br>
+                <a href=""><li>+256703-977-985</li></a>
+                <a href="mailto:myemail@example.com"><li>myemail@example.com</li></a>
             </ul>
             </div>
             <div class="f social">
               <h2>Social Media</h2>
               <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>News & Events</li>
-                <li>Testimonies</li>
-                <li>Give</li>
-                <li>Contact</li>
+                <a href=""><li>Facebook</li></a>
+                <a href=""><li>Twiter</li></a>
+                <a href=""><li>Linkedin</li></a>
+                <a href=""><li>Youtube</li></a>
             </ul>
             </div>
           </div>
-          <h3 style="width: 100%; text-align: center;">@ 2023 copyright websitename.com</h3>
+          <h3 style="width: 100%; font-size: medium; font-weight: lighter; text-align: center;">@ 2023 copyright websitename.com</h3>
         </footer>
         <script>
           let slideIndex = 0;

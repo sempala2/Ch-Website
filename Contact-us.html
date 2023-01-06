@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    header{
+            color: black;
+            background-color: #ffffff;
+            height: 100px;
+            width: 100vw;
+            z-index: 9999;
+            display: flex;
+            top: 0;
+            position: fixed;
+        }
+        nav{
+            position: absolute;
+            align-self: center;
+            right: 10%;
+        }
+        nav ul{
+            display: flex;
+            list-style-type: none;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: large;
+            gap: 20px;
+        }
+        ul a{
+            color: black;
+            text-decoration: none;
+        }
+        li{
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: ease .2s;
+            user-select: none;
+            cursor: pointer;
+        }
+        li:hover{
+           text-decoration-color: red;
+            
+        }
+        .logo{
+            position: absolute;
+            color: white;
+            align-self: center;
+            font-size:large;
+            left: 10%;
+        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      margin-top: 200px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .contact-info img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .contact-info p {
+      margin: 0;
+    }
+    .contact-info a {
+      color: #333;
+      text-decoration: none;
+    }
+    .contact-info div{
+        width: 33%;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="logo-demo.png" alt="logo" height="120px"></div>
+        <nav>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+              <a href="Contact-us.html"><li>About Us</li></a>
+              <a href="Contact-us.html"><li>Events & News</li></a>
+              <a href="Contact-us.html"><li>Gallery</li></a>
+              <a href="Contact-us.html"><li>Give</li></a>
+               <a href="Contact-us.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Got a question or just want to say hi? Here's how to get in touch with us:</p>
+    <div class="contact-info">
+      <div>
+        <img src="tel-icon.png" alt="Phone Icon">
+        <p>Phone:<br>+256-709-524-242 <br>+256-709-524-242</p>
+      </div>
+      <div>
+        <img src="mail-icon.jpg" alt="Email Icon">
+        <p>Email: <a href="mailto:youemail@example.com">youemail@example.com</a></p>
+      </div>
+      <div>
+        <img src="loc-icon.jpg" alt="Location Icon">
+        <p>Location: 123 Main Street, Victoria mall UG</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
