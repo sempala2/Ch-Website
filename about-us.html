@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=nknut Antiqua">
+    <title>ch-web</title>
+    <link rel="stylesheet" href="style.css">
   <style>
     /* add some style to the page */
     body {
@@ -29,14 +36,32 @@
       display: flex;
       flex-wrap: wrap;
       margin-top: 40px;   
+      gap: 10px;
     }
     .staff .member {
       width: calc(25vw - 10px);
       margin-bottom: 20px;
+      justify-content: center;
+      align-items: center;
+      max-height: 200px;
+      border-radius: 10px;
+      box-shadow: black 2px 2px 4px;
+      overflow: hidden;
+    }
+    .staff .member:hover{
+      width: calc(30vw - 10px);
+      border-radius: 2px;
+    }
+    .img{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
     }
     .staff .member img {
-      width: 20vw;
-      height: 20vw;
+      width: height();
+      height: 50%;
+      max-height: 100px;
       border-radius: 50%;
       object-fit: cover;
     }
@@ -48,52 +73,7 @@
       font-size: 0.8em;
       color: #666;
     }
-    header{
-          color: black;
-            background-color: #ffffff;
-            height: 70px;
-            width: 100vw;
-            z-index: 9999;
-            display: flex;
-            top: 0;
-            position: fixed;
-        }
-        nav{
-            position: absolute;
-            align-self: center;
-            right: 10%;
-        }
-        nav ul{
-            display: flex;
-            list-style-type: none;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bolder;
-            font-size: large;
-            gap: 20px;
-        }
-        ul a{
-            text-decoration: none;
-            color: black;
-        }
-        li{
-            text-decoration: underline;
-            text-decoration-color: transparent;
-            transition: ease .2s;
-            user-select: none;
-            cursor: pointer;
-        }
-        li:hover{
-           text-decoration-color: red;
-            
-        }
-        .logo{
-            position: absolute;
-            color: white;
-            align-self: center;
-            font-size:large;
-            left: 10%;
-        }
-/*---------------------------------------------------------------*/
+    
   </style>
 </head>
 <body>
@@ -110,38 +90,57 @@
           <a href="Contact-us.html"><li>Contact</li></a>
         </ul>
     </nav>
+    <div class="menu">
+      <img style="object-fit: cover; width: 100%; height: 100%;" src="menu.png" alt="">
+    </div>
 </header>
 <!-----------------------------------end of hearder-------------->
 
   <h1 style="margin-top: 80px;">About Us</h1>
   <div class="about-us">
-    <img src="bapt.jpg" alt="Our church">
+      <img src="bapt.jpg" alt="Pastor">
     <p>Our church is a welcoming community of believers in Jesus Christ, dedicated to sharing the good news of salvation and growing in our faith through worship, prayer, and the study of God's Word. We believe that the Bible is the inspired and authoritative source of truth, and we seek to live out its teachings in our daily lives.</p>
     <p>We offer a variety of worship services, small groups, and other activities for all ages. Our doors are open to everyone, regardless of background or belief. We hope you will join us and be a part of our church family.</p>
     <h2>Our Staff</h2>
     <div class="staff">
       <div class="member">
-        <img src="face1.jpg" alt="Pastor">
+        <div class="img">
+          <img src="face1.jpg" alt="Pastor">
+        </div>
         <h3>Pastor John Smith</h3>
         <p>Pastor John is the lead pastor of our church. He has been in ministry for over 20 years and has a passion for sharing the gospel and helping others grow in their faith.</p>
       </div>
       <div class="member">
-        <img src="face1.jpg" alt="Youth Pastor">
+        <div class="img">
+          <img src="face1.jpg" alt="Pastor">
+        </div>
         <h3>Youth Pastor Jane Doe</h3>
         <p>Pastor Jane is the youth pastor of our church. She has a heart for young people and loves to see them grow in their relationship with Jesus.</p>
       </div>
       <div class="member">
-        <img src="face1.jpg" alt="Pastor">
+        <div class="img">
+          <img src="face1.jpg" alt="Pastor">
+        </div>
         <h3>Pastor John Smith</h3>
         <p>Pastor John is the lead pastor of our church. He has been in ministry for over 20 years and has a passion for sharing the gospel and helping others grow in their faith.</p>
       </div>
       <div class="member">
-        <img src="face1.jpg" alt="Youth Pastor">
+        <div class="img">
+          <img src="face1.jpg" alt="Pastor">
+        </div>
         <h3>Youth Pastor Jane Doe</h3>
         <p>Pastor Jane is the youth pastor of our church. She has a heart for young people and loves to see them grow in their relationship with Jesus.</p>
       </div>
       <!-- add more staff members here -->
     </div>
   </div>
+  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.menu').click(function(){
+        $('nav').toggleClass('show');
+    });
+  });
+  </script>
 </body>
 </html>
